@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtest_rpc_proto.a CMakeFiles/test_rpc_proto.dir/proto/test_rpc/order.pb.cc.o
+/usr/bin/ranlib libtest_rpc_proto.a

@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/test_rpc_server.dir/server/test_rpc_server.cc.o -o test_rpc_server  libtest_rpc_proto.a -llightrpc -ltinyxml -lprotobuf -lzookeeper_mt 

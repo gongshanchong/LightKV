@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/kvctl.dir/client/kvclient.cc.o CMakeFiles/kvctl.dir/kvctl/main.cc.o -o kvctl  libkvserver_proto.a -lgflags -llightrpc -ltinyxml -lprotobuf -lzookeeper_mt 

@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/kvserver_main.dir/server/src/db.cc.o CMakeFiles/kvserver_main.dir/server/src/kvserver.cc.o CMakeFiles/kvserver_main.dir/server/src/lru.cc.o CMakeFiles/kvserver_main.dir/server/server_main.cc.o -o kvserver_main  libkvserver_proto.a -llightrpc -ltinyxml -lprotobuf -lzookeeper_mt 

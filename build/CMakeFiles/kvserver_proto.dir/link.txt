@@ -1,0 +1,2 @@
+/usr/bin/ar qc libkvserver_proto.a CMakeFiles/kvserver_proto.dir/proto/kvserver/kvserver.pb.cc.o
+/usr/bin/ranlib libkvserver_proto.a

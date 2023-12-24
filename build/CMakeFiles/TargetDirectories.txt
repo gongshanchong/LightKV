@@ -1,0 +1,9 @@
+/home/ubuntu/code/LightKV/build/CMakeFiles/test_rpc_proto.dir
+/home/ubuntu/code/LightKV/build/CMakeFiles/kvserver_proto.dir
+/home/ubuntu/code/LightKV/build/CMakeFiles/test_rpc_server.dir
+/home/ubuntu/code/LightKV/build/CMakeFiles/test_rpc_client.dir
+/home/ubuntu/code/LightKV/build/CMakeFiles/kvctl.dir
+/home/ubuntu/code/LightKV/build/CMakeFiles/kvserver_main.dir
+/home/ubuntu/code/LightKV/build/CMakeFiles/kvclient_main.dir
+/home/ubuntu/code/LightKV/build/CMakeFiles/edit_cache.dir
+/home/ubuntu/code/LightKV/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,62 @@
+syntax = "proto3";
+// protoc --cpp_out=. kvserver.proto
+package kv;
+option cc_generic_services = true;
+
+service KVServer {
+    rpc SetKV(ReqKV) returns (SetKVResponse) {}
+    rpc GetKV(ReqK) returns (GetKResponse) {}
+    rpc DelKV(ReqK) returns (DelKVResponse) {}
+    rpc SetExpire(ReqExpire) returns (SetExpireResponse) {}
+    rpc GetKeyName(ReqKeyName) returns (GetKeyNameResponse) {}
+    rpc SetKVStream(StreamtreamReqKV) returns (StreamSetKVResponse) {}
+}
+
+// repeated 代表可重复，我们可以理解为数组
+message GetKeyNameResponse {
+    repeated string val = 1;
+}
+
+message ReqKeyName {
+    string keyRex = 1;
+}
+
+message SetExpireResponse {
+    bool flag = 1;
+}
+
+message ReqExpire {
+    string key = 1;
+    uint64 expires = 2;
+}
+
+message ReqKV {
+    uint32 encoding = 1;
+    string key = 2;
+    string val = 3;
+}
+
+message SetKVResponse {
+    bool flag = 1;
+}
+
+message DelKVResponse {
+    bool flag = 1;
+}
+
+message ReqK {
+    string key = 1;
+}
+
+message GetKResponse {
+    bool flag = 1;
+    repeated string val = 2;
+}
+
+message StreamtreamReqKV {
+    repeated ReqKV stream_req = 1;
+}
+
+message StreamSetKVResponse {
+    repeated SetKVResponse stream_res = 1;
+}
