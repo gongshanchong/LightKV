@@ -3,7 +3,7 @@
 
 #include <exception>
 
-class MiniKVLogicErr : public std::exception {
+class LightKVLogicErr : public std::exception {
     const char* what() const throw() {
         return "logic error";
     }

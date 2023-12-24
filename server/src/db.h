@@ -18,7 +18,7 @@
 #define MEMORY_DETECT_INTERVAL 1000
 
 #define MAX_MEMORY_KB 100000 // kb
-#define RDB_FILE_NAME "minikv.rdb"
+#define RDB_FILE_NAME "lightkv.rdb"
 
 #define CHECK_REST_AND_LOG(x)          \
     do {                               \

@@ -74,14 +74,14 @@ LRUCache::~LRUCache() {
 
 std::string LRUCache::lastKey() {
     if (dlist_->empty()) {
-        throw MiniKVLogicErr();
+        throw LightKVLogicErr();
     }
     return dlist_->tail()->key;
 }
 
 void LRUCache::update(const std::string& key) {
     if (keyMap_.count(key) == 0) {
-        throw MiniKVLogicErr();
+        throw LightKVLogicErr();
     }
     dlist_->remove(keyMap_[key]);
     dlist_->insertFront(keyMap_[key]);
@@ -89,7 +89,7 @@ void LRUCache::update(const std::string& key) {
 
 void LRUCache::remove(const std::string& key) {
     if (keyMap_.count(key) == 0) {
-        throw MiniKVLogicErr();
+        throw LightKVLogicErr();
     }
     dlist_->remove(keyMap_[key]);
     auto p = keyMap_[key];
@@ -99,7 +99,7 @@ void LRUCache::remove(const std::string& key) {
 
 void LRUCache::insert(const std::string& key) {
     if (keyMap_.count(key) != 0) {
-        throw MiniKVLogicErr();
+        throw LightKVLogicErr();
     }
     Node* n = new Node{key};
     keyMap_[key] = n;
