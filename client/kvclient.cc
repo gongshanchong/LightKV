@@ -8,7 +8,7 @@ KVClient::KVClient(std::string config_path) : config_path_(config_path) {
     lightrpc::Config::SetGlobalConfig(config_path_.c_str());
     lightrpc::Logger::InitGlobalLogger();
     // 由地址获取通信通道
-    std::unique_ptr<lightrpc::RpcChannel> channel = std::make_unique<lightrpc::RpcChannel>(lightrpc::Config::GetGlobalConfig()->m_rpc_zookeepers_["default"].addr_);
+    std::unique_ptr<lightrpc::RpcChannel> channel = std::make_unique<lightrpc::RpcChannel>(lightrpc::Config::GetGlobalConfig()->m_rpc_servers_["zookeeper"].addr_);
     // 建立服务器桩便于服务的调用
     stub_ = std::make_unique<kv::KVServer_Stub>(channel.get());
 }

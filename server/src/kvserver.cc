@@ -11,7 +11,7 @@ KVServer::KVServer(std::string config_path) : config_path_(config_path){
 void KVServer::serve() {
     // 绑定地址
     std::unique_ptr<lightrpc::TcpServer> server_ = std::make_unique<lightrpc::TcpServer>(lightrpc::Config::GetGlobalConfig()->m_rpc_stubs_["default"].addr_, 
-    lightrpc::Config::GetGlobalConfig()->m_rpc_zookeepers_["default"].addr_, 
+    lightrpc::Config::GetGlobalConfig()->m_rpc_servers_["default"].addr_, 
     lightrpc::Config::GetGlobalConfig()->m_rpc_stubs_["default"].protocal_, 
     lightrpc::Config::GetGlobalConfig()->m_rpc_stubs_["default"].timeout_);
     // 注册服务
