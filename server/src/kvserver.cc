@@ -5,6 +5,7 @@ KVServer::KVServer(std::string config_path) : config_path_(config_path){
     // 初始化日志和配置文件
     lightrpc::Config::SetGlobalConfig(config_path_.c_str());
     lightrpc::Logger::InitGlobalLogger();
+    LightKVDB::getInstance()->init();
     kvService_ = std::shared_ptr<KVService>(new KVService());
 }
 
